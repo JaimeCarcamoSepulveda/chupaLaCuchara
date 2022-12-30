@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Hero () {
 return (
-    <section>
+    <section className="hero">
         <div className="hero--gallery-container">
             <img className="hero--photo" src="" alt="" />
         </div>
