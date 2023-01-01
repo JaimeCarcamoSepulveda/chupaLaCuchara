@@ -12,6 +12,9 @@ export default function App() {
   
   const recipeElements = recipeData.map(recipe=> {
     return < Recipe 
+      key = {recipe.id}
+      {...recipe}
+      /*
       img = {recipe.img} 
       starRating = {recipe.starRating}
       reviewCount = {recipe.reviewCount}
@@ -19,7 +22,9 @@ export default function App() {
       prepTime = {recipe.prepTime}
       nameOfDish = {recipe.nameOfDish}
       calorieCount = {recipe.calorieCount}
-      dishIngredients = {recipe.dishIngredients} />
+      dishIngredients = {recipe.dishIngredients}
+      camiFavorite = {recipe.camiFavorite} */
+       />
   })
 
 
@@ -28,7 +33,7 @@ export default function App() {
          < Navbar />
          <Greetings />
          < Hero />
-        <div>{recipeElements}</div>
+        <section className='recipe-list'>{recipeElements}</section>
          
     </article>
   )
