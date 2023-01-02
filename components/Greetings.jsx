@@ -24,7 +24,8 @@ export default function Greetings() {
     return(
         <>
             <section className="greeting">
-                <h1> Hello and {dayTime} are you ready to eat {mealType}?</h1>
+                <h1> {dayTime}! </h1>
+                <h2>are you ready to eat {mealType}?</h2>
 
             </section>
 

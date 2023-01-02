@@ -19,10 +19,11 @@
   --fw-reg: 600;
   --fw-bold: 900;
 
-  --clr-light: ;
-  --clr-dark: ;
+  --clr-light:;
+  --clr-dark: rgb(34, 25, 44);
+  --clr-bg: rgb(164, 186, 181);
   --clr-grayish:#918E9B;;
-  --clr-accent: ;
+  --clr-accent: pink;
   --clr-icon: ;
   --bs: 0px 3px 8px rgba(0, 0, 0, 0.1);
 
@@ -46,6 +47,12 @@ body {
   font-family: var(--ff-primary);
 }
 
+article {
+  min-height: 100vh;
+  background-color: var(--clr-bg);
+  color: var(--clr-dark);
+  
+}
 
 nav {
   display: flex;
@@ -65,12 +72,54 @@ section {
 
 }
 
+/* greeting section styling*/
+
+.greeting {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.greeting h1 {
+  position: absolute;
+  top: 80px;
+  font-size: 3rem;
+  padding: 0 1.5rem;
+}
+
+.greeting h2 {
+  position: relative;
+  top: 300px;
+  font-size: 5rem;
+  padding: 0 2.5rem 0 1.5rem;
+  text-align: right;
+}
+
+
+
+
+
+.greeting h2::after {
+  content: "  ";
+  display: block;
+  height: 2rem;
+  position: absolute;
+  left: 50vw;
+  background-color: var(--clr-accent);
+  right: 40px;
+  
+}
+
+/* hero section */
+
 .hero {
+  margin-top: 1rem;
   display: flex;
   flex-direction: column;
   
 }
-
 
 .hero--gallery-container {
   align-self: center;
@@ -85,6 +134,10 @@ section {
   margin-top: 0;
 }
 
+
+
+/* recipe section */
+
 .recipe--star {
     height: 14px;
 
@@ -95,7 +148,6 @@ section {
   flex-wrap: nowrap;
   gap: 1.3rem;
   overflow-x: auto;
-
 }
 
 .card-recipe {
@@ -108,7 +160,6 @@ section {
   position: relative;
 }
 
-
 .recipe-badge {
   position: absolute;
   top: 5px;
@@ -120,10 +171,6 @@ section {
   color: rgb(69, 20, 7);
   text-transform: uppercase;
 }
-
-
-
-
 
 .card-recipe--image {
   width: 100%;
@@ -144,6 +191,64 @@ section {
 .bold {
   font-weight: bold;
 }
+
+
+@media (max-width: 425px) {
+
+  
+.recipe--star {
+  height: 1.5rem;
+
+}
+
+.recipe-list {
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 1rem;
+}
+
+.card-recipe {
+width: 100%;
+min-width: 190px;
+font-size: 1.2rem;
+flex: 0 1 auto;
+display: flex;
+flex-direction: column;
+
+}
+
+.recipe-badge {
+position: absolute;
+padding: .2rem .5rem;
+left: 0;
+top: .9rem;
+font-size: 1rem;
+
+
+}
+
+.card-recipe--image {
+width: 80vw;
+max-width: fit-content;
+aspect-ratio: 1/1;
+height: auto;
+border-radius: 8px;
+align-self: center;
+}
+
+.recipe-stats {
+display: flex;
+flex-direction: row;
+
+  }
+  
+}
+
+
+
+
+
 
 
 
