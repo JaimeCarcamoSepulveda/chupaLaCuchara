@@ -9,13 +9,13 @@ export default function Greetings() {
     
    /* hours < 17? hours < 12?  dayTime ="good morning"; mealType = "breakfast": dayTime = "good afternoon"; mealType = "lunch":  dayTime ="good evening"; mealType= "dinner"; */
    if (hours < 12) {
-    dayTime = "Good morning"
+    dayTime = "morning"
     mealType = "Breakfast"
 } else if (hours >= 12 && hours < 17) {
-    dayTime = "Good afternoon"
+    dayTime = "afternoon"
     mealType = "Lunch"
 } else {
-    dayTime = "Good evening"
+    dayTime = "evening"
     mealType = "Dinner"
 }
 
@@ -24,7 +24,7 @@ export default function Greetings() {
     return(
         <>
             <section className="greeting">
-                <h1> {dayTime}! </h1>
+                <h1> Good <strong>{dayTime}</strong> </h1>
                 <h2>are you ready to eat {mealType}?</h2>
 
             </section>

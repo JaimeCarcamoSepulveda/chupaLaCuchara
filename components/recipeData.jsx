@@ -9,9 +9,9 @@ export default [
         reviewCount: 4,
         origin: "Cuba ",
         prepTime: "1 hour",
-        nameOfDish: "bistec empanisado",
+        nameOfDish: "Bistec Empanisado",
         calorieCount: "1200",
-        dishIngredients: ["bistec","migas de pan ", "aceite"],
+        dishIngredients: ["bistec ","migas de pan ", "aceite"],
         camiFavorite: 3,
         
     },
