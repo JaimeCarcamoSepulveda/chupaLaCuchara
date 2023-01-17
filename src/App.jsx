@@ -1,9 +1,11 @@
-import react from 'react'
+import ReactDOM from "react-dom/client"
 import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
 import Greetings from '../components/Greetings'
 import Recipe from '../components/Recipe'
 import recipeData from '../components/recipeData'
+import RecipeFilter from '../components/RecipeFilter'
+import UserForm from '../components/UserForm'
 
 //import reactLogo from './assets/react.svg'
 //import './App.css'
@@ -14,16 +16,6 @@ export default function App() {
     return < Recipe 
       key = {recipe.id}
       {...recipe}
-      /*
-      img = {recipe.img} 
-      starRating = {recipe.starRating}
-      reviewCount = {recipe.reviewCount}
-      origin =  {recipe.origin}
-      prepTime = {recipe.prepTime}
-      nameOfDish = {recipe.nameOfDish}
-      calorieCount = {recipe.calorieCount}
-      dishIngredients = {recipe.dishIngredients}
-      camiFavorite = {recipe.camiFavorite} */
        />
   })
 
@@ -32,10 +24,12 @@ export default function App() {
     <article>
          < Navbar />
          <Greetings />
+         < RecipeFilter/>
          < Hero />
         <section className='recipe-list'>{recipeElements}</section>
-         
+         < UserForm />
     </article>
+
   )
 }
 

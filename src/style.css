@@ -8,11 +8,13 @@
 :root {
 
   --ff-primary: "poppins", sans-serif;
-  --ff-secondary:
+  --ff-secondary: 
 
   --fs-h1: 2.5rem;
   --fs-h2: 2.5rem;
   --fs-h3: 2.5rem;
+  --fs-h4: 1.3rem;
+
   --fs-body: .8rem;
 
   --fw-light: 300;
@@ -150,6 +152,7 @@ section {
 }
 .card-recipe {
   min-width: 200px;
+  width: 250px;
   font-size: var(--fs-body);
   flex: 0 0 auto;
   display: flex;
@@ -269,8 +272,8 @@ backdrop-filter: none;
   }
 
 .card-recipe--image {
-width: 100vw;
-max-width: fit-content;
+width: 50vw;
+max-width: 265px;
 aspect-ratio: 1/1;
 height: auto;
 border-radius: 8px;
@@ -307,6 +310,26 @@ flex-wrap: wrap;
   
 }
 
+form {
+  margin: 0 auto;
+  justify-content: center;
+  height: 80vh;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+form input {
+  text-indent: 12px;
+  border-radius: 5px;
+}
+.comment {
+  text-indent: 2px;
+  display: block;
+  width: 400px;
+  height: 200px;
+}
 
 
 @media (max-width: 500px) {
@@ -372,83 +395,37 @@ flex-wrap: wrap;
     
   }
   
-
-
-
-
-
-
-/*
-:root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+.form {
+  display: grid;
+  grid-template: 2.5rem 2.5rem/ 1fr;
+  margin: 0 3rem;
+  gap: 1rem;
+  font-family: var(--ff-primary);
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  color: #242424;
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+.form--input {
+  grid-column: 1/-1;
+  margin: 0 4rem;
+  border: 2px solid var(--clr-accent);
+  border-radius: 10px;
+  text-indent: 2rem;
+  font-size: var(--fs-h4);
 }
 
-h1 {
-  color: white;
-  font-size: 3.2em;
-  line-height: 1.1;
+.form--input::placeholder {
+  text-transform: capitalize;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-align: center;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+.form--button {
+  grid-column: 1/-1;
+  margin: 0 4rem;
+  border-radius: 10px;
+  background: var(--clr-accent);
+  font-size: 1.4rem;
+  font-weight: var(--fw-bold);
+  color: var(--clr-bg);
   cursor: pointer;
-  transition: border-color 0.25s;
 }
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
-*/

@@ -1,4 +1,4 @@
-import React from "react";
+import ReactDOM from 'react-dom/client';
 import star from  "../src/assets/star-regular.svg"
 
 export default function Recipe(props) {
