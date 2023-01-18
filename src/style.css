@@ -312,8 +312,9 @@ flex-wrap: wrap;
 
 form {
   margin: 0 auto;
+  padding-top: 50px;
   justify-content: center;
-  height: 80vh;
+  height: 100vh;
   width: 400px;
   display: flex;
   flex-direction: column;
@@ -331,6 +332,9 @@ form input {
   height: 200px;
 }
 
+.likePage {
+  color: pink;
+}
 
 @media (max-width: 500px) {
   .recipe--star {
